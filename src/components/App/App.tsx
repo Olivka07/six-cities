@@ -1,4 +1,3 @@
-import { JSX } from 'react';
 import {
   BrowserRouter,
   Route,
@@ -12,20 +11,22 @@ import { AppRoute, AuthorizationStatus } from '../../constants/constants';
 import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
 import { HelmetProvider } from 'react-helmet-async';
 import { OfferPage } from '../../pages/OfferPage/OfferPage';
-import { Offer } from '../../types/offers.types';
 import { ReviewsBlock } from '../../types/reviews.types';
 import { OffersCity } from '../../types/offersCity.types';
+import { CityTypes } from '../../types/city.types';
+import { Offer } from "../../types/offers.types";
+
 
 
 
 interface AppProps {
   reviewsBlock: ReviewsBlock
-  offers: Offer[];
   offersCity: OffersCity[]
+  city: CityTypes
+  offers: Offer[]
 }
 
-function App({ reviewsBlock, offers, offersCity }: AppProps): JSX.Element {
-
+function App({ reviewsBlock, offersCity, city, offers }: AppProps): JSX.Element {
 
   return (
     <HelmetProvider>
@@ -33,7 +34,7 @@ function App({ reviewsBlock, offers, offersCity }: AppProps): JSX.Element {
         <Routes>
           <Route
             path={AppRoute.Main}
-            element={<MainPage offers={offers} />}
+            element={<MainPage offers={offers} city={city} />}
           />
           <Route
             path={AppRoute.Login}

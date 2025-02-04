@@ -1,16 +1,23 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../../components/App/Header/Header';
 import { OfferList } from '../../components/OffersList';
-import { OfferPreview } from '../../types/offers.types';
+import { Offer, OfferPreview } from '../../types/offers.types';
 
+import Map from '../../components/Maps/Map/Map';
+import { CityTypes, } from '../../types/city.types';
+import PointsList from '../../components/Maps/PointsList/PointsList';
 
 
 interface MainPageProps {
   offers: OfferPreview[],
+  city: CityTypes,
 }
 
-function MainPage({ offers }: MainPageProps): JSX.Element {
+function MainPage({ offers, city }: MainPageProps): JSX.Element {
+  const [selectedPoint, setSelectedPoint] = useState<Offer['id'] | null>(null);
+
+  const handleListItemHover = (listItemName: any) => { };
 
   return (
     <div className="page page--gray page--main">
@@ -92,7 +99,11 @@ function MainPage({ offers }: MainPageProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map" />
+              <Map
+                city={city}
+                offers={offers}
+                selectedPoint={selectedPoint}
+              />
             </div>
           </div>
         </div>

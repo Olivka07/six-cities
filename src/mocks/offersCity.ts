@@ -11,14 +11,16 @@ export const offersCity: OffersCity[] = [
     'city': {
       'name': CityName.Amsterdam,
       'location': {
+        title: CityName.Amsterdam,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
     'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
+      'title': 'Саундвью',
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 8
     },
     'isFavorite': false,
@@ -34,14 +36,16 @@ export const offersCity: OffersCity[] = [
     'city': {
       'name': CityName.Paris,
       'location': {
+        title: CityName.Paris,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
     'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
+      'title': 'Саундвью',
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 8
     },
     'isFavorite': true,
@@ -56,16 +60,18 @@ export const offersCity: OffersCity[] = [
     ,
     'price': 999,
     'city': {
-      'name': 'Moscow',
+      'name': CityName.Moscow,
       'location': {
+        title: CityName.Moscow,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
     'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
+      title: 'Саундвью',
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 8
     },
     'isFavorite': true,
@@ -81,14 +87,16 @@ export const offersCity: OffersCity[] = [
     'city': {
       'name': CityName.Cologne,
       'location': {
+        'title': CityName.Cologne,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
     'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
+      title: 'Саундвью',
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 8
     },
     'isFavorite': false,
@@ -99,3 +107,5 @@ export const offersCity: OffersCity[] = [
 ];
 
 export type OfferFavorite = OffersCity & Partial<Omit<OfferPreview, keyof OffersCity>>;
+
+

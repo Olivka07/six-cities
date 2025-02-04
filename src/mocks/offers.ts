@@ -1,7 +1,9 @@
+
+import { CityTypes, Point } from "../types/city.types";
 import { Offer } from "../types/offers.types";
 import { CityName } from "../utils/const";
 
-
+//Предложения на главном экране
 export const offers: Offer[] = [
   {
     'id': '6af6f711-c28d-4121-82cd-e0b462a27f00',
@@ -11,16 +13,32 @@ export const offers: Offer[] = [
     'city': {
       'name': CityName.Dusseldorf,
       'location': {
+        title: CityName.Dusseldorf,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
-    'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
-      'zoom': 8
-    },
+    'location':
+      [
+        {
+          title: 'Саундвью',
+          latitude: 52.3909553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Ферри Поинт',
+          latitude: 52.3609553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Бронкс',
+          latitude: 52.3909553943508,
+          longitude: 4.929309666406198,
+        }, {
+          title: 'Инвуд-Хилл',
+          latitude: 52.3809553943508,
+          longitude: 4.939309666406198,
+        }
+      ],
     'isFavorite': false,
     'isPremium': false,
     'rating': 4,
@@ -50,16 +68,32 @@ export const offers: Offer[] = [
     'city': {
       'name': CityName.Amsterdam,
       'location': {
+        title: CityName.Amsterdam,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
-    'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
-      'zoom': 8
-    },
+    'location':
+      [
+        {
+          title: 'Саундвью',
+          latitude: 52.3909553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Ферри Поинт',
+          latitude: 52.3609553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Бронкс',
+          latitude: 52.3909553943508,
+          longitude: 4.929309666406198,
+        }, {
+          title: 'Инвуд-Хилл',
+          latitude: 52.3809553943508,
+          longitude: 4.939309666406198,
+        },
+      ],
     'isFavorite': true,
     'isPremium': true,
     'rating': 2,
@@ -90,16 +124,33 @@ export const offers: Offer[] = [
     'city': {
       'name': CityName.Paris,
       'location': {
+        title: CityName.Paris,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
-    'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
-      'zoom': 8
-    },
+    'location':
+      [
+        {
+          title: 'Саундвью',
+          latitude: 52.3909553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Ферри Поинт',
+          latitude: 52.3609553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Бронкс',
+          latitude: 52.3909553943508,
+          longitude: 4.929309666406198,
+        }, {
+          title: 'Инвуд-Хилл',
+          latitude: 52.3809553943508,
+          longitude: 4.939309666406198,
+        },
+      ],
+
     'isFavorite': true,
     'isPremium': false,
     'rating': 1,
@@ -129,16 +180,33 @@ export const offers: Offer[] = [
     'city': {
       'name': CityName.Cologne,
       'location': {
+        title: CityName.Cologne,
         'latitude': 52.35514938496378,
         'longitude': 4.673877537499948,
         'zoom': 8
       }
     },
-    'location': {
-      'latitude': 52.35514938496378,
-      'longitude': 4.673877537499948,
-      'zoom': 8
-    },
+    'location':
+      [
+        {
+          title: 'Саундвью',
+          latitude: 52.3909553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Ферри Поинт',
+          latitude: 52.3609553943508,
+          longitude: 4.85309666406198,
+        }, {
+          title: 'Бронкс',
+          latitude: 52.3909553943508,
+          longitude: 4.929309666406198,
+        }, {
+          title: 'Инвуд-Хилл',
+          latitude: 52.3809553943508,
+          longitude: 4.939309666406198,
+        },
+      ],
+
     'isFavorite': false,
     'isPremium': true,
     'rating': 0,
@@ -161,3 +229,16 @@ export const offers: Offer[] = [
     maxAdults: 4
   },
 ]
+
+
+export const city: CityTypes = {
+  'name': 'Amsterdam',
+  'location': {
+    'title': 'Amsterdam',
+    'latitude': 52.35514938496378,
+    'longitude': 4.673877537499948,
+    'zoom': 8
+  }
+};
+
+
